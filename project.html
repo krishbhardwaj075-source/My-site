@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#projects {
+  background: #0a0a0a;
+  padding: 100px 10%;
+  text-align: center;
+  border-top: 2px solid rgba(163, 16, 163, 0.3);
+}
+#projects h2 {
+  font-size: 45px;
+  background: linear-gradient(90deg, #ff00ff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+.project-intro {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 60px;
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+.project-card {
+  background: #141414;
+  border: 2px solid rgba(163, 16, 163, 0.3);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(163, 16, 163, 0.2);
+  padding: 25px;
+  text-align: left;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 50px #ff00ff;
+}
+.project-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+.project-card img:hover {
+  transform: scale(1.05);
+}
+.project-card h3 {
+  color: #ff00ff;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.project-card p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.project-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  color: #ff00ff;
+  border: 2px solid #ff00ff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.project-btn:hover {
+  background: linear-gradient(90deg, #a855f7, #ff00ff);
+  color: white;
+  box-shadow: 0 0 25px #ff00ff;
+}
+@media (max-width: 900px) {
+  .project-card {
+    text-align: center;
+  }
+  .project-card img {
+    height: 180px;
+  }
+}
+</style>
+<body>
+<section id="projects">
+  <h2>🚀 My Projects</h2>
+  <p class="project-intro">
+    Here are some of my featured works — blending creativity, logic, and innovation.
+  </p>
+
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="images/college-website.png" alt="College Website">
+      <h3>🏫 MCM DAV College Website</h3>
+      <p>
+        A complete college website designed using <strong>HTML, CSS, and JavaScript</strong>.  
+        It includes college details, departments, events, and a student portal with a responsive layout.
+      </p>
+      <a href="https://krishbhardwaj075-source.github.io/College-site/" class="project-btn">View Project</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="images/lms.png" alt="Learning Management System">
+      <h3>📘 Library Management System (LMS)</h3>
+      <p>
+        A <strong>web-based learning platform</strong> developed with Python and MySQL,  
+        allowing students to register, access study materials, and track progress digitally.
+      </p>
+      <a href="https://github.com/krishbhardwaj075-source/Library-Management-System.git" class="project-btn">View Project</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="images/sp.png" alt="Smart Path Finder">
+      <h3>🧭 Smart Path Finder</h3>
+      <p>
+        An AI-based pathfinding application built using <strong>Python and A* Algorithm</strong>.  
+        It visualizes real-time shortest paths between points with graphical representation.
+      </p>
+      <a href="https://github.com/krishbhardwaj075-source/Smart-Path-Finder.git" class="project-btn">View Project</a>
+    </div>
+  </div>
+</section>
+</body>
+</html>
