@@ -1,204 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Section</title>
+  <style>
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #0a0a0a; 
+      color: #eaeaea;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #contact {
+      background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(12,12,12,1) 100%);
+      padding: 80px 10%;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    /* Left: Contact Info */
+    .contact-info {
+      background: #0f0f10;
+      border: 2px solid rgba(163,16,163,0.18);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(163,16,163,0.06);
+    }
+
+    .contact-info h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #ff00ff, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .contact-info p {
+      color: #cfcfcf;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+      color: #ddd;
+    }
+
+    .contact-info ul li {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(163,16,163,0.25);
+      color: #ffb7ff;
+      font-weight: 600;
+      transition: all .3s ease;
+      box-shadow: 0 0 8px rgba(163,16,163,0.08);
+    }
+
+    .social-links a:hover {
+      background: linear-gradient(90deg, rgba(168,85,247,0.15), rgba(255,0,255,0.12));
+      color: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(168,85,247,0.12);
+    }
+
+    /* Right: Contact Form */
+    .contact-form {
+      background: #0f0f10;
+      border: 2px solid rgba(163,16,163,0.18);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(163,16,163,0.06);
+    }
+
+    .contact-form h2 {
+      font-size: 32px;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #ff00ff, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form textarea {
+      width: 100%;
+      background: #0b0b0b;
+      border: 2px solid rgba(163,16,163,0.16);
+      color: #e8e8e8;
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      font-size: 15px;
+      resize: vertical;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+      transition: border-color .25s ease, box-shadow .25s ease, transform .15s ease;
+    }
+
+    .form input:focus,
+    .form textarea:focus {
+      outline: none;
+      border-color: rgba(168,85,247,0.9);
+      box-shadow: 0 6px 30px rgba(168,85,247,0.08);
+      transform: translateY(-2px);
+    }
+
+    .form .btn {
+      display: inline-block;
+      padding: 12px 34px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ff00ff;
+      background: transparent;
+      border: 3px solid #ff00ff;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all .35s ease;
+      box-shadow: 0 6px 20px rgba(163,16,163,0.18);
+    }
+
+    .form .btn:hover {
+      background: linear-gradient(90deg, #a855f7, #ff00ff);
+      color: #fff;
+      transform: scale(1.03);
+      box-shadow: 0 18px 50px rgba(255,0,255,0.18);
+    }
+
+    /* Responsive: stack columns on small screens */
+    @media (max-width: 900px) {
+      #contact {
+        padding: 40px 6%;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+    }
+
+  </style>
 </head>
-<style>
-    /* ---------- Contact Section (matches site theme) ---------- */
-#contact {
-  background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(12,12,12,1) 100%);
-  padding: 80px 10%;
-  color: #eaeaea;
-}
-
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Left: contact info */
-.contact-info {
-  background: #0f0f10;
-  border: 2px solid rgba(163,16,163,0.18);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 30px rgba(163,16,163,0.06);
-}
-
-.contact-info h2 {
-  font-size: 32px;
-  margin-bottom: 12px;
-  background: linear-gradient(90deg, #ff00ff, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.contact-info p {
-  color: #cfcfcf;
-  line-height: 1.6;
-  margin-bottom: 18px;
-}
-
-.contact-info ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 18px 0;
-  color: #ddd;
-}
-
-.contact-info ul li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.contact-info .social-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.contact-info .social-links a {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(163,16,163,0.25);
-  color: #ffb7ff;
-  text-decoration: none;
-  font-weight: 600;
-  background: transparent;
-  transition: all .3s ease;
-  box-shadow: 0 0 8px rgba(163,16,163,0.08);
-}
-
-.contact-info .social-links a:hover {
-  background: linear-gradient(90deg, rgba(168,85,247,0.15), rgba(255,0,255,0.12));
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(168,85,247,0.12);
-}
-
-/* Right: contact form */
-.contact-form {
-  background: #0f0f10;
-  border: 2px solid rgba(163,16,163,0.18);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 30px rgba(163,16,163,0.06);
-}
-
-.contact-form h2 {
-  font-size: 32px;
-  margin-bottom: 14px;
-  background: linear-gradient(90deg, #ff00ff, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.form input[type="text"],
-.form input[type="email"],
-.form textarea {
-  width: 100%;
-  background: #0b0b0b;
-  border: 2px solid rgba(163,16,163,0.16);
-  color: #e8e8e8;
-  padding: 12px 14px;
-  border-radius: 10px;
-  margin-bottom: 14px;
-  font-size: 15px;
-  resize: vertical;
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
-  transition: border-color .25s ease, box-shadow .25s ease, transform .15s ease;
-}
-
-.form input:focus,
-.form textarea:focus {
-  outline: none;
-  border-color: rgba(168,85,247,0.9);
-  box-shadow: 0 6px 30px rgba(168,85,247,0.08);
-  transform: translateY(-2px);
-}
-
-/* Submit button styled like other buttons */
-.form .btn {
-  display: inline-block;
-  padding: 12px 34px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #ff00ff;
-  background: transparent;
-  border: 3px solid #ff00ff;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all .35s ease;
-  box-shadow: 0 6px 20px rgba(163,16,163,0.18);
-}
-
-.form .btn:hover {
-  background: linear-gradient(90deg, #a855f7, #ff00ff);
-  color: #fff;
-  transform: scale(1.03);
-  box-shadow: 0 18px 50px rgba(255,0,255,0.18);
-}
-
-/* Small helper to keep layout neat */
-.contact-info,
-.contact-form {
-  min-height: 260px;
-}
-
-/* Responsive: stack columns on small screens */
-@media (max-width: 900px) {
-  #contact {
-    padding: 40px 6%;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info,
-  .contact-form {
-    min-height: auto;
-  }
-
-  .contact-info .social-links {
-    justify-content: center;
-  }
-}
-
-</style>
 <body>
-      <section id="contact">
+
+  <section id="contact">
     <div class="contact-container">
+      <!-- Contact Info -->
       <div class="contact-info">
         <h2>Get in Touch</h2>
         <p>If you’d like to discuss a project, collaboration, or just say hi — feel free to reach out!</p>
         <ul>
-          <li><strong>Email:</strong> bhardwajtarun640@gmail.com</li>
-          <li><strong>Phone:</strong> +91 7876004578</li>
+          <li><strong>Email:</strong> krishbhardwaj.075@gmail.com</li>
+          <li><strong>Phone:</strong> +91 6283479022</li>
           <li><strong>Location:</strong> Kangra, Himachal Pradesh, India</li>
         </ul>
-
         <div class="social-links">
-          <a href="">Facebook</a>
-          <a href="https://www.instagram.com/krishbhardwaj05?igsh=MXZ3eTVpbW43M3VjYg==" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/in/krish-bhardwaj-19aa22280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedin</a>
+          <a href="https://www.instagram.com/krishbhardwaj05" target="_blank">Instagram</a>
         </div>
       </div>
 
+      <!-- Contact Form -->
       <div class="contact-form">
         <h2>Send a Message</h2>
         <form action="#" method="post" class="form">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
           <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button class="btn" type="submit" class="bn">Send Message</button>
+          <button class="btn" type="submit">Send Message</button>
         </form>
       </div>
+    </div>
+  </section>
 </body>
 </html>
