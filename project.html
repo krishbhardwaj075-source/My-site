@@ -29,13 +29,16 @@
     border-top: 2px solid rgba(163,16,163,0.3);
   }
 
-  #projects h2 {
-    font-size: 45px;
-    background: linear-gradient(90deg, #ff00ff, #a855f7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
-  }
+ #projects h2 {
+  font-size: 45px;
+  background: linear-gradient(90deg, #ff00ff, #a855f7);
+  background-clip: text;             
+  -webkit-background-clip: text;     
+  color: transparent;                 
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
 
   .project-intro {
     font-size: 18px;
@@ -124,7 +127,7 @@
 <body>
 
 <section id="projects">
-  <h2>🚀 My Projects</h2>
+  <h2>🚀My Projects</h2>
   <p class="project-intro">
     Here are some of my featured works — blending creativity, logic, and innovation.
   </p>
